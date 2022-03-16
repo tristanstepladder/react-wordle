@@ -86,7 +86,7 @@ export const getWordOfDay = () => {
   const randomIndex = Math.floor(Math.random() * (max - 0 + 1) + 0)
 
   const winningword = localeAwareUpperCase(WORDS[randomIndex])
-  console.log(winningword)
+  // console.log(winningword)
 
   return {
     solution: winningword,

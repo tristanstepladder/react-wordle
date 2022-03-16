@@ -18,9 +18,11 @@ export const shareStatus = (
   handleShareToClipboard: () => void
 ) => {
   const textToShare =
-    `${GAME_TITLE} https://shorturl.at/efvAE (Day ${solutionIndex + 1}) ${
-      lost ? 'X' : guesses.length
-    }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
+    `${GAME_TITLE} https//unlimitedwordle.netlify.app (Day ${
+      solutionIndex + 1
+    }) ${lost ? 'X' : guesses.length}/${MAX_CHALLENGES}${
+      isHardMode ? '*' : ''
+    }\n\n` +
     generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode))
 
   const shareData = { text: textToShare }
