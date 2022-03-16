@@ -76,14 +76,20 @@ export const localeAwareUpperCase = (text: string) => {
 
 export const getWordOfDay = () => {
   // January 1, 2022 Game Epoch
-  const epochMs = new Date(2022, 0).valueOf()
+  const epochMs = new Date(2022, 2, 14).valueOf()
   const now = Date.now()
   const msInDay = 86400000
   const index = Math.floor((now - epochMs) / msInDay)
   const nextday = (index + 1) * msInDay + epochMs
 
+  const max = WORDS.length - 1
+  const randomIndex = Math.floor(Math.random() * (max - 0 + 1) + 0)
+
+  const winningword = localeAwareUpperCase(WORDS[randomIndex])
+  console.log(winningword)
+
   return {
-    solution: localeAwareUpperCase(WORDS[index % WORDS.length]),
+    solution: winningword,
     solutionIndex: index,
     tomorrow: nextday,
   }

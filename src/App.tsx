@@ -50,7 +50,10 @@ function App() {
   const [currentGuess, setCurrentGuess] = useState('')
   const [isGameWon, setIsGameWon] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
-  const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
+  const [isStatsModalOpen, setIsStatsModalOpen] = useState(
+    !!localStorage.getItem('hasPlayedBefore') &&
+      !localStorage.getItem('enteredGiveaway')
+  )
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
   const [currentRowClass, setCurrentRowClass] = useState('')
   const [isGameLost, setIsGameLost] = useState(false)
@@ -249,6 +252,13 @@ function App() {
       />
       <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
         <div className="pb-6 grow">
+          <div style={{ textAlign: 'center', padding: '25px' }}>
+            Unlimited Wordle, provided by{' '}
+            <b>
+              <a href="https://joinstepladder.com?code=wordle">StepLadder.</a>
+            </b>{' '}
+            Helping you to buy your homes faster.
+          </div>
           <Grid
             guesses={guesses}
             currentGuess={currentGuess}
