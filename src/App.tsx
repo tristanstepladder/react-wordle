@@ -257,7 +257,7 @@ function App() {
             <b>
               <a href="https://joinstepladder.com?code=wordle">StepLadder.</a>
             </b>{' '}
-            Helping you to buy your homes faster.
+            Helping you to buy your first home faster.
           </div>
           <Grid
             guesses={guesses}

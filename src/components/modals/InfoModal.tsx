@@ -11,7 +11,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
     <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
         Unlimited Wordle was brought to you by <b>StepLadder</b>. We help people
-        in the UK buy their homes faster,{' '}
+        in the UK buy their first homes faster,{' '}
         <a href="https://joinstepladder.com?code=wordle">
           <b>see here</b>
         </a>
