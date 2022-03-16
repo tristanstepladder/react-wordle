@@ -100,7 +100,13 @@ export const StatsModal = ({
     <BaseModal
       title={STATISTICS_TITLE}
       isOpen={isOpen}
-      handleClose={handleClose}
+      handleClose={() => {
+        if (hasEnteredGiveeaway) {
+          handleClose()
+        } else {
+          alert('Please enter your details to have unlimited goes')
+        }
+      }}
     >
       {hasEnteredGiveeaway && (
         <div
